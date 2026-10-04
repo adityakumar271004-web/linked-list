@@ -3,27 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Guess the Number Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
-    <!-- header -->
-    <h1 class="header">Guess the number game</h1>
-    <!-- instruction -->
-    <button class="instruction-button">click it to get game instructions</button>
-    <br>
-    <p class="instruction hidden">In this game you have to guess the number which computer can pick at random from 1 to 100 and you have to find it and remember computer itself instruct you to the number and the catch is you have to find in 10 attempts and based on your performance you will get a score also...</p>
-    <!-- input -->
-    <input type="number" class="input" placeholder="0" min="0" max="100">
-    <!-- message -->
-    <p class="message">you are good to go</p>
-    <!-- control button -->
-    <div class="buttons">
-    <button class="check">verify the number</button>
-    <button class="restart">restart</button>
-      </div> 
-    <script src="./script.js"></script>
+    <div class="game-container">
+        <!-- Header -->
+        <h1 class="header">Guess the Number</h1>
 
-    
+        <!-- Scores -->
+        <div class="scores">
+            <p class="score">Score: 20</p>
+            <p class="highest_score">Highest: 0</p>
+        </div>
+
+        <!-- Instruction Toggle Button -->
+        <button class="instruction-button">How to Play</button>
+
+        <!-- Instruction Text -->
+        <p class="instruction hidden">
+            In this game, the computer picks a random number from 1 to 100. You have 10 attempts to find it. You will receive hints after each guess and a score based on your performance!
+        </p>
+
+        <!-- Game Play Section -->
+        <div class="game-play">
+            <input type="number" class="input" placeholder="??" min="1" max="100">
+            <p class="message">You are good to go!</p>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="buttons">
+            <button class="check">Verify</button>
+            <button class="restart">Restart</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>
